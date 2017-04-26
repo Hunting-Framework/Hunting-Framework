@@ -1,0 +1,22 @@
+# Hunting-Framework
+This project is a python framework containing heuristics for hunting bad things in pcap.
+It provides a .txt report for each pcap summarising the results and a score based on the level of malicous or suspicious traffic.
+
+The framework makes use of the Virustotal Public API and therefore requires an API key.
+
+Dependencies:
+ - Python3
+ - Tshark as an environment variable
+ - requests module (installed via pip)
+
+Output is placed in ./Output/
+
+Main.py - This script takes a pcap as input and produces csv files and a temp file which is interpreted by heur.py.
+
+Heur.py - This script takes no arguments as it reads from the tempfile outputted my Main. It contains the processing and heuristics classes and outputs a text report.
+
+Usage: python3 Main.py pcap
+
+Usage: python3 heur.py
+
+Any questions - huntingframework@gmail.com
